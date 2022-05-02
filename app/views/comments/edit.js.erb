@@ -1,2 +1,5 @@
 console.log(`hello from edit`)
-## <%= render 'form', comment: @comment %>
+var edit_comment_form = $(`<%= j(render 'form', comment: @comment) %>`);
+var new_comment_form = $("#<%= dom_id(@comment.photo) %>_comment_form");
+new_comment_form.hide();
+new_comment_form.before(edit_comment_form);
