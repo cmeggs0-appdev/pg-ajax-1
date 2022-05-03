@@ -1,6 +1,9 @@
 <% follow_request = current_user.sent_follow_requests.find_by(recipient: recipient) %>
 <% if follow_request %>
-  <%= link_to follow_request, method: :delete, class: "btn btn-outline-secondary" do %>
+  <%= link_to follow_request, 
+      remote: true,
+      method: :delete, 
+      class: "btn btn-outline-secondary" do %>
     <% if follow_request.pending? %>
       Un-request
     <% else %>

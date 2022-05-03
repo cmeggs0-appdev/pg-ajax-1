@@ -1,0 +1,3 @@
+console.log("Hello from destroy like");
+var likefield = $("#<%= dom_id(@like.photo) %>");
+likefield.replaceWith(`<%= j(render("photos/photo", like: @like, photo: @like.photo)) %>`);
