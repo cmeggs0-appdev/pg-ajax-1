@@ -1,0 +1,2 @@
+console.log("Hello from destroying follow requests");
+$("#follow_unfollow").replaceWith($(`<%= j(render "follow_requests/form", follow_request: @follow_request) %>`))
